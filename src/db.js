@@ -11,6 +11,8 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
 userModel(sequelize);
 tasksModel(sequelize);
 const {Users,Tasks}=sequelize.models;
+Users.hasMany(Tasks);
+Tasks.belongsTo(Users);
 module.exports={
     ...sequelize.models,
     conn:sequelize

@@ -22,7 +22,7 @@ module.exports=((sequelize)=>{
         },
         password:{
             type:DataTypes.STRING,
-            unique:true
+            
         }
     })
 })
