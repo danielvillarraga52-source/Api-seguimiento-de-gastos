@@ -4,15 +4,19 @@ module.exports=((sequelize)=>{
     sequelize.define("Tasks",{
 
         id:{
-            type:DataTypes.INTEGER,
-            primaryKey:true
+            type:DataTypes.UUID,
+            primaryKey:true,
+            defaultValue:DataTypes.UUIDV4
         },
         monto:{
             type:DataTypes.FLOAT,
+            defaultValue:0.0,
+            
 
         },
         fecha:{
             type:DataTypes.DATE,
+            allowNull:true
         },
         categoria:{
             type:DataTypes.ENUM(

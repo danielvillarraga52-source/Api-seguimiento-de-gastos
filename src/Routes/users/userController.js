@@ -70,7 +70,8 @@ const deleteUserController=async(id)=>{
       const userExits=await Users.findByPk(id);
     if(!userExits){
         throw Error("usuario no existe");
-    }return await userExits.destroy()
+    }await userExits.destroy();
+    return userExits
 }
 
 
