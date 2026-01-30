@@ -1,5 +1,5 @@
 const {Tasks,Users}=require("../../db");
-const { Op } = require("sequelize"); // Importante: necesitamos los operadores
+const { Op } = require("sequelize"); 
 
 const getAllTasksController = async (filtro, fechaInicio, fechaFin) => {
     let whereClause = {};
