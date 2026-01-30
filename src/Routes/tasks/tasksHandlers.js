@@ -1,8 +1,8 @@
 const {getAllTasksController,postTaskController,getTaskController,deleteTaskController,updateTaskController}=require("./tasksController")
 const getAllTasksHandler=async(req,res)=>{
-
+    const {filtro,fechaInicio,FechaFin}=req.query;
     try {
-        const allTasks=await getAllTasksController();
+        const allTasks=await getAllTasksController({filtro,fechaInicio,FechaFin});
         res.status(200).json(allTasks);
     } catch (error) {
         res.status(400).json({error:error.message});
