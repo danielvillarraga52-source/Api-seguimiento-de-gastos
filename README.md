@@ -1,4 +1,6 @@
 
+URL del proyecto: https://roadmap.sh/projects/expense-tracker-api
+
 📊 Expense Tracker API (Gestor de Gastos)
 
 Esta es una API REST construida con Node.js y Express para gestionar gastos personales. Utiliza PostgreSQL como base de datos y Sequelize como ORM para el manejo de los datos y filtros avanzados.
